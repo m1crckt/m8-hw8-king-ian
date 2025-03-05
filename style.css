@@ -39,12 +39,24 @@ header {
 header a {
   font-size: 1.5rem;
   color: var(--off-white);
+  transition: transform 300ms, background-color 600ms;
+}
+
+header a:hover {
+  color: blue;
+  transform: translateY(-4px);
 }
 /* end header link animations */
 
 /* article link transitions */
 main a {
   color: var(--danger-color);
+  transition: font-size 300ms, background-color 600ms;
+}
+
+main a:hover {
+  color: maroon;
+  font-size: 30px;
 }
 /* end article link transitions */
 
@@ -100,6 +112,16 @@ section.hero > button {
   border-radius: 12px;
   text-transform: uppercase;
   cursor: pointer;
+  animation: hover 1s infinite alternate;
+}
+
+@keyframes hover {
+  from {
+    transform: translateY(0px) scale(0)
+  }
+  to {
+    transform: translateY(-18px) scale(1.5)
+  }
 }
 
 main article {
